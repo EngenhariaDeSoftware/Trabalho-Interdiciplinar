@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="15c34bfb-00ed-4fc9-8a86-c728e138a9e6" name="Ludy@LUDIANE 2012-06-12 22:48:21" runUser="Ludiane\Ludy" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="bccec7d0-300c-456a-8024-f7ef96043a0e">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Ludy_LUDIANE 2012-06-12 22_48_21">
+      <DeploymentItem filename="D:\Users\Ludy\Documents\Desktop\Potz\Potz\Potz\bin\Potz.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\NUnit 2.6\bin\framework\nunit.framework.dll" />
+      <DeploymentItem filename="D:\Users\Ludy\Documents\Desktop\Potz\Potz\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-06-12T22:48:21.2295180-03:00" queuing="2012-06-12T22:48:21.2627181-03:00" start="2012-06-12T22:48:21.2939182-03:00" finish="2012-06-12T22:48:21.6215188-03:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="verificarPotzValidoTest5" storage="d:\users\ludy\documents\desktop\potz\potz\testproject1\bin\debug\testproject1.dll" id="5744b74f-c700-5454-9f24-cb281bd0f845">
+      <Execution id="58bbf99b-48dd-4c05-b22f-b77a9db2f818" />
+      <TestMethod codeBase="D:/Users/Ludy/Documents/Desktop/Potz/Potz/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.VerificarPotzTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="verificarPotzValidoTest5" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="5744b74f-c700-5454-9f24-cb281bd0f845" executionId="58bbf99b-48dd-4c05-b22f-b77a9db2f818" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="58bbf99b-48dd-4c05-b22f-b77a9db2f818" testId="5744b74f-c700-5454-9f24-cb281bd0f845" testName="verificarPotzValidoTest5" computerName="LUDIANE" duration="00:00:00.0177087" startTime="2012-06-12T22:48:21.3251182-03:00" endTime="2012-06-12T22:48:21.6059187-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="58bbf99b-48dd-4c05-b22f-b77a9db2f818">
+    </UnitTestResult>
+  </Results>
+</TestRun>

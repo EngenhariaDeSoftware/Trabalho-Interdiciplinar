@@ -1,0 +1,10 @@
+D:\Users\Ludy\Documents\Desktop\Potz\TestProject1\bin\Debug\TestProject1.dll
+D:\Users\Ludy\Documents\Desktop\Potz\TestProject1\bin\Debug\TestProject1.pdb
+D:\Users\Ludy\Documents\Desktop\Potz\TestProject1\bin\Debug\nunit.framework.dll
+D:\Users\Ludy\Documents\Desktop\Potz\TestProject1\bin\Debug\Potz.dll
+D:\Users\Ludy\Documents\Desktop\Potz\TestProject1\bin\Debug\Potz.pdb
+D:\Users\Ludy\Documents\Desktop\Potz\TestProject1\bin\Debug\EntityFramework.xml
+D:\Users\Ludy\Documents\Desktop\Potz\TestProject1\bin\Debug\nunit.framework.xml
+D:\Users\Ludy\Documents\Desktop\Potz\TestProject1\obj\Debug\ResolveAssemblyReference.cache
+D:\Users\Ludy\Documents\Desktop\Potz\TestProject1\obj\Debug\TestProject1.dll
+D:\Users\Ludy\Documents\Desktop\Potz\TestProject1\obj\Debug\TestProject1.pdb

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="ebd624a9-4cdb-4868-9e74-b62f7eef6435" name="Ludy@LUDIANE 2012-06-12 22:53:39" runUser="Ludiane\Ludy" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="bccec7d0-300c-456a-8024-f7ef96043a0e">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Ludy_LUDIANE 2012-06-12 22_53_39">
+      <DeploymentItem filename="D:\Users\Ludy\Documents\Desktop\Potz\Potz\Potz\bin\Potz.dll" />
+      <DeploymentItem filename="C:\Program Files (x86)\NUnit 2.6\bin\framework\nunit.framework.dll" />
+      <DeploymentItem filename="D:\Users\Ludy\Documents\Desktop\Potz\Potz\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2012-06-12T22:53:39.1517575-03:00" queuing="2012-06-12T22:53:39.2747646-03:00" start="2012-06-12T22:53:39.3817707-03:00" finish="2012-06-12T22:53:39.8587980-03:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="6" executed="6" passed="4" error="0" failed="2" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="verificarPotzValidoTest5" storage="d:\users\ludy\documents\desktop\potz\potz\testproject1\bin\debug\testproject1.dll" id="5744b74f-c700-5454-9f24-cb281bd0f845">
+      <Execution id="a3a2c0ec-c120-4dc6-8a50-07f7fcff4214" />
+      <TestMethod codeBase="D:/Users/Ludy/Documents/Desktop/Potz/Potz/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.VerificarPotzTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="verificarPotzValidoTest5" />
+    </UnitTest>
+    <UnitTest name="verificarPotzValidoTest0" storage="d:\users\ludy\documents\desktop\potz\potz\testproject1\bin\debug\testproject1.dll" id="29c44fd8-e0aa-eb3e-3f69-3a5a21edaa18">
+      <Execution id="c0851150-4741-452f-8fdc-0c0d38ea086e" />
+      <TestMethod codeBase="D:/Users/Ludy/Documents/Desktop/Potz/Potz/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.VerificarPotzTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="verificarPotzValidoTest0" />
+    </UnitTest>
+    <UnitTest name="verificarPotzValidoTest1" storage="d:\users\ludy\documents\desktop\potz\potz\testproject1\bin\debug\testproject1.dll" id="c3bb9955-867c-57d8-ad4e-741ea168c88d">
+      <Execution id="b1786c3b-ea31-49f4-bd09-f916a3b87aa9" />
+      <TestMethod codeBase="D:/Users/Ludy/Documents/Desktop/Potz/Potz/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.VerificarPotzTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="verificarPotzValidoTest1" />
+    </UnitTest>
+    <UnitTest name="verificarPotzValidoNegativo3" storage="d:\users\ludy\documents\desktop\potz\potz\testproject1\bin\debug\testproject1.dll" id="39202402-d48c-9452-492b-55be4237335e">
+      <Execution id="4bfc8996-50f4-4d2b-9440-d7ad6a1e22c1" />
+      <TestMethod codeBase="D:/Users/Ludy/Documents/Desktop/Potz/Potz/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.VerificarPotzTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="verificarPotzValidoNegativo3" />
+    </UnitTest>
+    <UnitTest name="verificarPotzValidoTest4" storage="d:\users\ludy\documents\desktop\potz\potz\testproject1\bin\debug\testproject1.dll" id="9be91db4-0a3a-235e-27c6-6cd9728f3b9e">
+      <Execution id="bb6df5fa-aa79-4fb9-b857-cea2f79cdd0f" />
+      <TestMethod codeBase="D:/Users/Ludy/Documents/Desktop/Potz/Potz/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.VerificarPotzTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="verificarPotzValidoTest4" />
+    </UnitTest>
+    <UnitTest name="verificarPotzValidoTest2" storage="d:\users\ludy\documents\desktop\potz\potz\testproject1\bin\debug\testproject1.dll" id="833218db-a0a1-9bda-f145-360eb3d86e5d">
+      <Execution id="158e3a6c-6d43-4a9d-a5d9-7efe2417d128" />
+      <TestMethod codeBase="D:/Users/Ludy/Documents/Desktop/Potz/Potz/TestProject1/bin/Debug/TestProject1.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestProject1.VerificarPotzTest, TestProject1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="verificarPotzValidoTest2" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="29c44fd8-e0aa-eb3e-3f69-3a5a21edaa18" executionId="c0851150-4741-452f-8fdc-0c0d38ea086e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="39202402-d48c-9452-492b-55be4237335e" executionId="4bfc8996-50f4-4d2b-9440-d7ad6a1e22c1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5744b74f-c700-5454-9f24-cb281bd0f845" executionId="a3a2c0ec-c120-4dc6-8a50-07f7fcff4214" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="833218db-a0a1-9bda-f145-360eb3d86e5d" executionId="158e3a6c-6d43-4a9d-a5d9-7efe2417d128" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9be91db4-0a3a-235e-27c6-6cd9728f3b9e" executionId="bb6df5fa-aa79-4fb9-b857-cea2f79cdd0f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c3bb9955-867c-57d8-ad4e-741ea168c88d" executionId="b1786c3b-ea31-49f4-bd09-f916a3b87aa9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="c0851150-4741-452f-8fdc-0c0d38ea086e" testId="29c44fd8-e0aa-eb3e-3f69-3a5a21edaa18" testName="verificarPotzValidoTest0" computerName="LUDIANE" duration="00:00:00.0425229" startTime="2012-06-12T22:53:39.4647754-03:00" endTime="2012-06-12T22:53:39.7867939-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c0851150-4741-452f-8fdc-0c0d38ea086e">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;-1&gt;. Actual:&lt;1&gt;. </Message>
+          <StackTrace>   at TestProject1.VerificarPotzTest.verificarPotzValidoTest0() in D:\Users\Ludy\Documents\Desktop\Potz\Potz\TestProject1\VerificarPotzTest.cs:line 63
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4bfc8996-50f4-4d2b-9440-d7ad6a1e22c1" testId="39202402-d48c-9452-492b-55be4237335e" testName="verificarPotzValidoNegativo3" computerName="LUDIANE" duration="00:00:00.0002230" startTime="2012-06-12T22:53:39.7907941-03:00" endTime="2012-06-12T22:53:39.8037948-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4bfc8996-50f4-4d2b-9440-d7ad6a1e22c1">
+    </UnitTestResult>
+    <UnitTestResult executionId="a3a2c0ec-c120-4dc6-8a50-07f7fcff4214" testId="5744b74f-c700-5454-9f24-cb281bd0f845" testName="verificarPotzValidoTest5" computerName="LUDIANE" duration="00:00:00.0004138" startTime="2012-06-12T22:53:39.8067950-03:00" endTime="2012-06-12T22:53:39.8107952-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a3a2c0ec-c120-4dc6-8a50-07f7fcff4214">
+    </UnitTestResult>
+    <UnitTestResult executionId="158e3a6c-6d43-4a9d-a5d9-7efe2417d128" testId="833218db-a0a1-9bda-f145-360eb3d86e5d" testName="verificarPotzValidoTest2" computerName="LUDIANE" duration="00:00:00.0002071" startTime="2012-06-12T22:53:39.8147955-03:00" endTime="2012-06-12T22:53:39.8187957-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="158e3a6c-6d43-4a9d-a5d9-7efe2417d128">
+    </UnitTestResult>
+    <UnitTestResult executionId="bb6df5fa-aa79-4fb9-b857-cea2f79cdd0f" testId="9be91db4-0a3a-235e-27c6-6cd9728f3b9e" testName="verificarPotzValidoTest4" computerName="LUDIANE" duration="00:00:00.0002104" startTime="2012-06-12T22:53:39.8217959-03:00" endTime="2012-06-12T22:53:39.8257961-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bb6df5fa-aa79-4fb9-b857-cea2f79cdd0f">
+    </UnitTestResult>
+    <UnitTestResult executionId="b1786c3b-ea31-49f4-bd09-f916a3b87aa9" testId="c3bb9955-867c-57d8-ad4e-741ea168c88d" testName="verificarPotzValidoTest1" computerName="LUDIANE" duration="00:00:00.0016522" startTime="2012-06-12T22:53:39.8287963-03:00" endTime="2012-06-12T22:53:39.8357967-03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b1786c3b-ea31-49f4-bd09-f916a3b87aa9">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.AreEqual failed. Expected:&lt;-1&gt;. Actual:&lt;1&gt;. </Message>
+          <StackTrace>   at TestProject1.VerificarPotzTest.verificarPotzValidoTest1() in D:\Users\Ludy\Documents\Desktop\Potz\Potz\TestProject1\VerificarPotzTest.cs:line 70
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
