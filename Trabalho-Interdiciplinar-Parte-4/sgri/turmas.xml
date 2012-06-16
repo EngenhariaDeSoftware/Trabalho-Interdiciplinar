@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Registros>
+    <item>
+        <Disciplinas>
+            <Nome>Matematica</Nome>
+            <Turno>3</Turno><!-- 1Manha2Tarde3Noite -->
+            <horaInicial>19:00:00</horaInicial>
+            <horaFinal>20:40:00</horaFinal><!--0=Normal1laboratorio2auditorio3SalaEspecial -->
+            <idCurso>17</idCurso>
+        </Disciplinas>
+        <Pessoas>
+            <Nome>Professor 1</Nome>
+            <Email>Professor1@pucminas.br</Email>
+        </Pessoas>
+        <Turmas>
+            <Nome>Turma de Matematica</Nome>
+            <Grupo>Grupo 1111</Grupo>
+            <!--<idPessoa>pessoa</idPessoa>
+            <idDisciplina>Disciplina</idDisciplina>-->
+        </Turmas>
+        <Salas>
+            <Predio>Predio 1111</Predio>
+            <Andar>Andar 1111</Andar>
+            <Numero>Numero 1111</Numero>
+            <tipoSala>0</tipoSala><!--0=Normal1laboratorio2auditorio3SalaEspecial -->
+            <Capacidade>111 Pessoas</Capacidade>
+        </Salas>
+    </item>
+    <item>
+        <Disciplinas>
+            <Nome>Portugues</Nome>
+            <Turno>3</Turno><!-- 1Manha2Tarde3Noite -->
+            <horaInicial>19:00:00</horaInicial>
+            <horaFinal>20:40:00</horaFinal><!--0=Normal1laboratorio2auditorio3SalaEspecial -->
+            <idCurso>17</idCurso>
+        </Disciplinas>
+        <Pessoas>
+            <Nome>Professor 2</Nome>
+            <Email>Professor2@pucminas.br</Email>
+        </Pessoas>
+        <Turmas>
+            <Nome>Turma de Portugues</Nome>
+            <Grupo>Grupo 2222</Grupo>
+            <!--<idPessoa>pessoa</idPessoa>
+            <idDisciplina>Disciplina</idDisciplina>-->
+        </Turmas>
+        <Salas>
+            <Predio>Predio 2222</Predio>
+            <Andar>Andar 2222</Andar>
+            <Numero>Numero 2222</Numero>
+            <tipoSala>0</tipoSala><!--0=Normal1laboratorio2auditorio3SalaEspecial -->
+            <Capacidade>2222 Pessoas</Capacidade>
+        </Salas>
+    </item>
+    <item>
+        <Disciplinas>
+            <Nome>Geografia</Nome>
+            <Turno>3</Turno><!-- 1Manha2Tarde3Noite -->
+            <horaInicial>19:00:00</horaInicial>
+            <horaFinal>20:40:00</horaFinal><!--0=Normal1laboratorio2auditorio3SalaEspecial -->
+            <idCurso>17</idCurso>
+        </Disciplinas>
+        <Pessoas>
+            <Nome>Professor 3</Nome>
+            <Email>Professor3@pucminas.br</Email>
+        </Pessoas>
+        <Turmas>
+            <Nome>Turma de Geografia</Nome>
+            <Grupo>Grupo 3333</Grupo>
+            <!--<idPessoa>pessoa</idPessoa>
+            <idDisciplina>Disciplina</idDisciplina>-->
+        </Turmas>
+        <Salas>
+            <Predio>Predio 3333</Predio>
+            <Andar>Andar 3333</Andar>
+            <Numero>Numero 3333</Numero>
+            <tipoSala>0</tipoSala><!--0=Normal1laboratorio2auditorio3SalaEspecial -->
+            <Capacidade>3333 Pessoas</Capacidade>
+        </Salas>
+    </item>
+</Registros>

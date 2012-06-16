@@ -1,0 +1,454 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_PRIV_INSTRUCTION (0xc0000096) at pc=0x00fe2a90, pid=2836, tid=3168
+#
+# JRE version: 7.0_04-b20
+# Java VM: Java HotSpot(TM) Client VM (23.0-b21 mixed mode windows-x86 )
+# Problematic frame:
+# j  org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater$SourceIndexers.<init>(Z)V+75
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x08b69400):  JavaThread "Parsing & Indexing Loop (201203012225)" daemon [_thread_in_Java, id=3168, stack(0x0b300000,0x0b500000)]
+
+siginfo: ExceptionCode=0xc0000096
+
+Registers:
+EAX=0x00000000, EBX=0x000000f8, ECX=0x00000280, EDX=0x00000008
+ESP=0x0b4feecc, EBP=0x0b4fef14, ESI=0x2a1ba5ca, EDI=0x0b4fef30
+EIP=0x00fe2a90, EFLAGS=0x00010216
+
+Top of Stack: (sp=0x0b4feecc)
+0x0b4feecc:   0b4fef30 2a1ba5ca 0b4fef14 0b4feeec
+0x0b4feedc:   000000f8 00000000 00000000 00000000
+0x0b4feeec:   00fe2a8a 6dc3f098 0b4feef4 2a1ba5c3
+0x0b4feefc:   0b4fef30 2a1ba7e8 00000000 2a1ba620
+0x0b4fef0c:   00000000 0b4fef2c 0b4fef58 00fe32c7
+0x0b4fef1c:   00000000 00000000 1acd8db4 00000137
+0x0b4fef2c:   00000000 1108ede8 1108ede8 0b4fef38
+0x0b4fef3c:   2a1ba4bd 0b4fef60 2a1ba7e8 00000000 
+
+Instructions: (pc=0x00fe2a90)
+0x00fe2a70:   40 00 00 00 b0 f0 c3 6d ff ff ff ff 00 00 00 00
+0x00fe2a80:   68 98 f0 c3 6d e8 00 00 00 00 60 e8 90 98 b6 6c
+0x00fe2a90:   f4 68 68 f0 c3 6d e8 00 00 00 00 60 e8 7f 98 b6
+0x00fe2aa0:   6c f4 66 90 00 00 00 00 00 00 00 00 00 00 00 00 
+
+
+Register to memory mapping:
+
+EAX=0x00000000 is an unknown value
+EBX=0x000000f8 is an unknown value
+ECX=0x00000280 is an unknown value
+EDX=0x00000008 is an unknown value
+ESP=0x0b4feecc is pointing into the stack for thread: 0x08b69400
+EBP=0x0b4fef14 is pointing into the stack for thread: 0x08b69400
+ESI=0x2a1ba5ca is an oop
+{constMethod} 
+ - klass: {other class}
+ - method:       0x2a1ba620 {method} '<init>' '(Z)V' in 'org/netbeans/modules/parsing/impl/indexing/RepositoryUpdater$SourceIndexers'
+ - exceptions:   0x28051128
+ - stackmap data:       [B
+bci_from(2A1BA5CA) = 82; print_codes():
+EDI=0x0b4fef30 is pointing into the stack for thread: 0x08b69400
+
+
+Stack: [0x0b300000,0x0b500000],  sp=0x0b4feecc,  free space=2043k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+j  org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater$SourceIndexers.<init>(Z)V+75
+j  org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater$SourceIndexers.load(Z)Lorg/netbeans/modules/parsing/impl/indexing/RepositoryUpdater$SourceIndexers;+5
+j  org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater$Work.scanFiles(Ljava/net/URL;Ljava/util/Collection;ZZ)Z+141
+j  org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater$FileListWork.getDone()Z+26
+j  org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater$Work.doTheWork()V+61
+j  org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater$Task.schedule(Lorg/netbeans/modules/parsing/impl/indexing/RepositoryUpdater$Work;Z)V+475
+j  org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater.scheduleWork(Lorg/netbeans/modules/parsing/impl/indexing/RepositoryUpdater$Work;Z)V+127
+j  org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater.addIndexingJob(Ljava/net/URL;Ljava/util/Collection;ZZZZZLorg/netbeans/modules/parsing/impl/indexing/LogContext;)V+406
+j  org.netbeans.modules.parsing.api.indexing.IndexingManager.addIndexingJob(Ljava/net/URL;Ljava/util/Collection;ZZZZZ)V+21
+j  org.netbeans.modules.parsing.api.indexing.IndexingManager.refreshIndexAndWait(Ljava/net/URL;Ljava/util/Collection;ZZ)V+40
+J  org.netbeans.modules.parsing.spi.indexing.support.QuerySupport$1.call()Ljava/util/Collection;
+J  org.netbeans.modules.masterfs.filebasedfs.utils.FileChangedManager.priorityIO(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+j  org.netbeans.modules.parsing.impl.Utilities.runPriorityIO(Ljava/util/concurrent/Callable;)Ljava/lang/Object;+19
+j  org.netbeans.modules.parsing.spi.indexing.support.QuerySupport.query(Ljava/lang/String;Ljava/lang/String;Lorg/netbeans/modules/parsing/spi/indexing/support/QuerySupport$Kind;[Ljava/lang/String;)Ljava/util/Collection;+31
+j  org.netbeans.modules.php.editor.elements.IndexQueryImpl.search(Ljava/lang/String;Ljava/lang/String;Lorg/netbeans/modules/parsing/spi/indexing/support/QuerySupport$Kind;[Ljava/lang/String;)Ljava/util/Collection;+30
+J  org.netbeans.modules.php.editor.elements.IndexQueryImpl.getMethodsImpl(Lorg/netbeans/modules/php/editor/api/NameKind$Exact;Lorg/netbeans/modules/php/editor/api/NameKind;Ljava/util/EnumSet;)Ljava/util/Set;
+j  org.netbeans.modules.php.editor.elements.IndexQueryImpl.getInheritedTypeMembers(Lorg/netbeans/modules/php/editor/api/elements/TypeElement;Ljava/util/LinkedHashSet;Ljava/util/LinkedHashSet;Ljava/util/EnumSet;Ljava/util/EnumSet;)Ljava/util/LinkedHashSet;+14
+j  org.netbeans.modules.php.editor.elements.IndexQueryImpl.getInheritedMethods(Lorg/netbeans/modules/php/editor/api/elements/TypeElement;)Ljava/util/Set;+51
+j  org.netbeans.modules.php.editor.verification.ImplementAbstractMethodsHint.checkHints(Ljava/util/Collection;Lorg/netbeans/modules/php/editor/verification/PHPRuleContext;)Ljava/util/Collection;+68
+j  org.netbeans.modules.php.editor.verification.ImplementAbstractMethodsHint.computeHintsImpl(Lorg/netbeans/modules/php/editor/verification/PHPRuleContext;Ljava/util/List;Lorg/netbeans/modules/php/editor/verification/PHPHintsProvider$Kind;)V+28
+J  org.netbeans.modules.php.editor.verification.PHPHintsProvider.computeHints(Lorg/netbeans/modules/csl/api/HintsProvider$HintsManager;Lorg/netbeans/modules/csl/api/RuleContext;Ljava/util/List;)V
+j  org.netbeans.modules.parsing.api.ParserManager$UserTaskAction.run()Ljava/lang/Void;+29
+j  org.netbeans.modules.parsing.api.ParserManager$UserTaskAction.run()Ljava/lang/Object;+1
+j  org.netbeans.modules.parsing.impl.TaskProcessor$2.call()Ljava/lang/Void;+4
+j  org.netbeans.modules.parsing.impl.TaskProcessor$2.call()Ljava/lang/Object;+1
+J  org.netbeans.modules.masterfs.filebasedfs.utils.FileChangedManager.priorityIO(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
+j  org.netbeans.modules.csl.hints.infrastructure.HintsTask.run(Lorg/netbeans/modules/csl/spi/ParserResult;Lorg/netbeans/modules/parsing/spi/SchedulerEvent;)V+31
+j  org.netbeans.modules.csl.hints.infrastructure.HintsTask.run(Lorg/netbeans/modules/parsing/spi/Parser$Result;Lorg/netbeans/modules/parsing/spi/SchedulerEvent;)V+6
+j  org.netbeans.modules.parsing.impl.TaskProcessor.callParserResultTask(Lorg/netbeans/modules/parsing/spi/ParserResultTask;Lorg/netbeans/modules/parsing/spi/Parser$Result;Lorg/netbeans/modules/parsing/spi/SchedulerEvent;)J+73
+j  org.netbeans.modules.parsing.impl.TaskProcessor$CompilationJob.run()V+738
+j  java.util.concurrent.Executors$RunnableAdapter.call()Ljava/lang/Object;+4
+j  java.util.concurrent.FutureTask$Sync.innerRun()V+29
+j  java.util.concurrent.FutureTask.run()V+4
+j  java.util.concurrent.ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V+46
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+5
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x1296da]
+V  [jvm.dll+0x1d837e]
+V  [jvm.dll+0x1298c3]
+V  [jvm.dll+0x129927]
+V  [jvm.dll+0xd24af]
+V  [jvm.dll+0x149987]
+V  [jvm.dll+0x149af0]
+V  [jvm.dll+0x17df89]
+C  [MSVCR100.dll+0x5c6de]  endthreadex+0x3a
+C  [MSVCR100.dll+0x5c788]  endthreadex+0xe4
+C  [kernel32.dll+0xb729]  GetModuleFileNameA+0x1ba
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0be69800 JavaThread "Inactive RequestProcessor thread [Was:org.openide.text Editor Initialization/org.openide.text.CloneableEditor$DoInitialize]" daemon [_thread_blocked, id=1204, stack(0x06cc0000,0x06ec0000)]
+  0x0be68800 JavaThread "Inactive RequestProcessor thread [Was:Flush UI Logs/org.netbeans.modules.uihandler.UIHandler$2WriteOut]" daemon [_thread_blocked, id=1376, stack(0x06ac0000,0x06cc0000)]
+  0x0be68400 JavaThread "Inactive RequestProcessor thread [Was:CaretMarkProvider/org.netbeans.modules.editor.errorstripe.caret.CaretMarkProvider$1]" daemon [_thread_blocked, id=3788, stack(0x05cc0000,0x05ec0000)]
+  0x0be5a400 JavaThread "Inactive RequestProcessor thread [Was:org.netbeans.modules.editor.errorstripe.AnnotationView/org.netbeans.modules.editor.errorstripe.AnnotationView$RepaintTask]" daemon [_thread_blocked, id=1404, stack(0x05520000,0x05720000)]
+  0x0be25c00 JavaThread "Inactive RequestProcessor thread [Was:SelectedNodesScheduler/org.netbeans.modules.parsing.impl.SelectedNodesScheduler$1]" daemon [_thread_blocked, id=2524, stack(0x060c0000,0x062c0000)]
+  0x0be25400 JavaThread "Inactive RequestProcessor thread [Was:OpenIDE-request-processor-5/org.netbeans.modules.parsing.spi.Scheduler$1]" daemon [_thread_blocked, id=2780, stack(0x05ec0000,0x060c0000)]
+  0x0bf14800 JavaThread "Inactive RequestProcessor thread [Was:org.netbeans.modules.project.ui.actions.ActiveConfigAction/org.netbeans.modules.project.ui.actions.ActiveConfigAction$13]" daemon [_thread_blocked, id=4088, stack(0x068c0000,0x06ac0000)]
+  0x08eb0c00 JavaThread "Inactive RequestProcessor thread [Was:Explorer Actions/org.netbeans.modules.openide.explorer.ExplorerActionsImpl$ActionStateUpdater]" daemon [_thread_blocked, id=2608, stack(0x066c0000,0x068c0000)]
+  0x0bbf3800 JavaThread "Inactive RequestProcessor thread [Was:CaretMarkProvider/org.netbeans.modules.editor.errorstripe.caret.CaretMarkProvider$1]" daemon [_thread_blocked, id=3792, stack(0x04980000,0x04b80000)]
+  0x0be4a800 JavaThread "pool-4-thread-1" [_thread_blocked, id=3416, stack(0x062c0000,0x064c0000)]
+  0x0886d400 JavaThread "Swing-Shell" daemon [_thread_blocked, id=3132, stack(0x04b80000,0x04d80000)]
+=>0x08b69400 JavaThread "Parsing & Indexing Loop (201203012225)" daemon [_thread_in_Java, id=3168, stack(0x0b300000,0x0b500000)]
+  0x087e3400 JavaThread "TimerQueue" daemon [_thread_blocked, id=3456, stack(0x0a030000,0x0a230000)]
+  0x07d38800 JavaThread "Worker-JM" [_thread_blocked, id=3320, stack(0x09e30000,0x0a030000)]
+  0x07d2f400 JavaThread "Framework Event Dispatcher" daemon [_thread_blocked, id=3264, stack(0x09c30000,0x09e30000)]
+  0x07d02c00 JavaThread "Thread-2" daemon [_thread_blocked, id=1576, stack(0x09830000,0x09a30000)]
+  0x07cdc400 JavaThread "W32 File Monitor" daemon [_thread_in_native, id=2000, stack(0x09630000,0x09830000)]
+  0x07ce2400 JavaThread "File Watcher" [_thread_blocked, id=1304, stack(0x09430000,0x09630000)]
+  0x08933400 JavaThread "State Data Manager" daemon [_thread_blocked, id=3000, stack(0x091c0000,0x093c0000)]
+  0x0892f400 JavaThread "Framework Active Thread" [_thread_blocked, id=3012, stack(0x08fc0000,0x091c0000)]
+  0x07b01400 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=232, stack(0x08490000,0x08690000)]
+  0x07b00c00 JavaThread "AWT-Shutdown" [_thread_blocked, id=796, stack(0x07fd0000,0x081d0000)]
+  0x03a37400 JavaThread "AWT-Windows" daemon [_thread_in_native, id=3072, stack(0x081d0000,0x083d0000)]
+  0x07a17800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=3048, stack(0x07dd0000,0x07fd0000)]
+  0x03b32800 JavaThread "CLI Requests Server" daemon [_thread_in_native, id=2960, stack(0x073a0000,0x075a0000)]
+  0x03aeb800 JavaThread "Active Reference Queue Daemon" daemon [_thread_blocked, id=2888, stack(0x04780000,0x04980000)]
+  0x03a88000 JavaThread "RequestProcessor queue manager" daemon [_thread_blocked, id=2840, stack(0x04580000,0x04780000)]
+  0x039aa000 JavaThread "Service Thread" daemon [_thread_blocked, id=272, stack(0x04180000,0x04380000)]
+  0x039a4c00 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=420, stack(0x03f80000,0x04180000)]
+  0x039a3000 JavaThread "Attach Listener" daemon [_thread_blocked, id=1808, stack(0x03d80000,0x03f80000)]
+  0x039a1800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=1812, stack(0x03b80000,0x03d80000)]
+  0x00c69000 JavaThread "Finalizer" daemon [_thread_blocked, id=1988, stack(0x03780000,0x03980000)]
+  0x00c63c00 JavaThread "Reference Handler" daemon [_thread_blocked, id=2872, stack(0x03580000,0x03780000)]
+  0x00b81c00 JavaThread "main" [_thread_blocked, id=2856, stack(0x00030000,0x00230000)]
+
+Other Threads:
+  0x00c5e000 VMThread [stack: 0x03380000,0x03580000] [id=2868]
+  0x039c6800 WatcherThread [stack: 0x04380000,0x04580000] [id=424]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 78528K, used 21804K [0x10050000, 0x15580000, 0x18050000)
+  eden space 69824K,  24% used [0x10050000, 0x110c3b00, 0x14480000)
+  from space 8704K,  56% used [0x14d00000, 0x151d78c8, 0x15580000)
+  to   space 8704K,   0% used [0x14480000, 0x14480000, 0x14d00000)
+ tenured generation   total 174412K, used 126591K [0x18050000, 0x22aa3000, 0x28050000)
+   the space 174412K,  72% used [0x18050000, 0x1fbefe58, 0x1fbf0000, 0x22aa3000)
+ compacting perm gen  total 54784K, used 54564K [0x28050000, 0x2b5d0000, 0x38050000)
+   the space 54784K,  99% used [0x28050000, 0x2b5993e0, 0x2b599400, 0x2b5d0000)
+No shared spaces configured.
+
+Code Cache  [0x00fe0000, 0x023d8000, 0x02fe0000)
+ total_blobs=10231 nmethods=9932 adapters=231 free_code_cache=12346Kb largest_free_block=12630848
+
+Compilation events (10 events):
+Event: 2517.052 Thread 0x039a4c00 10044             nu.validator.htmlparser.sax.HtmlParser::lazyInit (398 bytes)
+Event: 2517.054 Thread 0x039a4c00 nmethod 10044 0x023d2b48 code [0x023d2d40, 0x023d359c]
+Event: 2518.983 Thread 0x039a4c00 10045             sun.security.provider.MD5::FF (33 bytes)
+Event: 2518.983 Thread 0x039a4c00 nmethod 10045 0x023d3cc8 code [0x023d3dc0, 0x023d3e70]
+Event: 2518.984 Thread 0x039a4c00 10046             sun.security.provider.MD5::GG (33 bytes)
+Event: 2518.984 Thread 0x039a4c00 nmethod 10046 0x023d3ec8 code [0x023d3fc0, 0x023d4070]
+Event: 2518.984 Thread 0x039a4c00 10047             sun.security.provider.MD5::HH (29 bytes)
+Event: 2518.984 Thread 0x039a4c00 nmethod 10047 0x023d40c8 code [0x023d41c0, 0x023d4260]
+Event: 2518.984 Thread 0x039a4c00 10048             sun.security.provider.MD5::II (31 bytes)
+Event: 2518.984 Thread 0x039a4c00 nmethod 10048 0x023d42c8 code [0x023d43c0, 0x023d4460]
+
+GC Heap History (10 events):
+Event: 2486.678 GC heap before
+{Heap before GC invocations=245 (full 8):
+ def new generation   total 78528K, used 74398K [0x10050000, 0x15580000, 0x18050000)
+  eden space 69824K, 100% used [0x10050000, 0x14480000, 0x14480000)
+  from space 8704K,  52% used [0x14480000, 0x148f7af0, 0x14d00000)
+  to   space 8704K,   0% used [0x14d00000, 0x14d00000, 0x15580000)
+ tenured generation   total 174412K, used 125118K [0x18050000, 0x22aa3000, 0x28050000)
+   the space 174412K,  71% used [0x18050000, 0x1fa7f8d0, 0x1fa7fa00, 0x22aa3000)
+ compacting perm gen  total 54784K, used 54561K [0x28050000, 0x2b5d0000, 0x38050000)
+   the space 54784K,  99% used [0x28050000, 0x2b598540, 0x2b598600, 0x2b5d0000)
+No shared spaces configured.
+Event: 2486.700 GC heap after
+Heap after GC invocations=246 (full 8):
+ def new generation   total 78528K, used 3430K [0x10050000, 0x15580000, 0x18050000)
+  eden space 69824K,   0% used [0x10050000, 0x10050000, 0x14480000)
+  from space 8704K,  39% used [0x14d00000, 0x15059af0, 0x15580000)
+  to   space 8704K,   0% used [0x14480000, 0x14480000, 0x14d00000)
+ tenured generation   total 174412K, used 125658K [0x18050000, 0x22aa3000, 0x28050000)
+   the space 174412K,  72% used [0x18050000, 0x1fb06888, 0x1fb06a00, 0x22aa3000)
+ compacting perm gen  total 54784K, used 54561K [0x28050000, 0x2b5d0000, 0x38050000)
+   the space 54784K,  99% used [0x28050000, 0x2b598540, 0x2b598600, 0x2b5d0000)
+No shared spaces configured.
+}
+Event: 2494.711 GC heap before
+{Heap before GC invocations=246 (full 8):
+ def new generation   total 78528K, used 73254K [0x10050000, 0x15580000, 0x18050000)
+  eden space 69824K, 100% used [0x10050000, 0x14480000, 0x14480000)
+  from space 8704K,  39% used [0x14d00000, 0x15059af0, 0x15580000)
+  to   space 8704K,   0% used [0x14480000, 0x14480000, 0x14d00000)
+ tenured generation   total 174412K, used 125658K [0x18050000, 0x22aa3000, 0x28050000)
+   the space 174412K,  72% used [0x18050000, 0x1fb06888, 0x1fb06a00, 0x22aa3000)
+ compacting perm gen  total 54784K, used 54564K [0x28050000, 0x2b5d0000, 0x38050000)
+   the space 54784K,  99% used [0x28050000, 0x2b5993b0, 0x2b599400, 0x2b5d0000)
+No shared spaces configured.
+Event: 2494.730 GC heap after
+Heap after GC invocations=247 (full 8):
+ def new generation   total 78528K, used 3900K [0x10050000, 0x15580000, 0x18050000)
+  eden space 69824K,   0% used [0x10050000, 0x10050000, 0x14480000)
+  from space 8704K,  44% used [0x14480000, 0x1484f0d0, 0x14d00000)
+  to   space 8704K,   0% used [0x14d00000, 0x14d00000, 0x15580000)
+ tenured generation   total 174412K, used 125658K [0x18050000, 0x22aa3000, 0x28050000)
+   the space 174412K,  72% used [0x18050000, 0x1fb06888, 0x1fb06a00, 0x22aa3000)
+ compacting perm gen  total 54784K, used 54564K [0x28050000, 0x2b5d0000, 0x38050000)
+   the space 54784K,  99% used [0x28050000, 0x2b5993b0, 0x2b599400, 0x2b5d0000)
+No shared spaces configured.
+}
+Event: 2500.819 GC heap before
+{Heap before GC invocations=247 (full 8):
+ def new generation   total 78528K, used 73724K [0x10050000, 0x15580000, 0x18050000)
+  eden space 69824K, 100% used [0x10050000, 0x14480000, 0x14480000)
+  from space 8704K,  44% used [0x14480000, 0x1484f0d0, 0x14d00000)
+  to   space 8704K,   0% used [0x14d00000, 0x14d00000, 0x15580000)
+ tenured generation   total 174412K, used 125658K [0x18050000, 0x22aa3000, 0x28050000)
+   the space 174412K,  72% used [0x18050000, 0x1fb06888, 0x1fb06a00, 0x22aa3000)
+ compacting perm gen  total 54784K, used 54564K [0x28050000, 0x2b5d0000, 0x38050000)
+   the space 54784K,  99% used [0x28050000, 0x2b5993b0, 0x2b599400, 0x2b5d0000)
+No shared spaces configured.
+Event: 2500.840 GC heap after
+Heap after GC invocations=248 (full 8):
+ def new generation   total 78528K, used 4578K [0x10050000, 0x15580000, 0x18050000)
+  eden space 69824K,   0% used [0x10050000, 0x10050000, 0x14480000)
+  from space 8704K,  52% used [0x14d00000, 0x151788b0, 0x15580000)
+  to   space 8704K,   0% used [0x14480000, 0x14480000, 0x14d00000)
+ tenured generation   total 174412K, used 125658K [0x18050000, 0x22aa3000, 0x28050000)
+   the space 174412K,  72% used [0x18050000, 0x1fb06888, 0x1fb06a00, 0x22aa3000)
+ compacting perm gen  total 54784K, used 54564K [0x28050000, 0x2b5d0000, 0x38050000)
+   the space 54784K,  99% used [0x28050000, 0x2b5993b0, 0x2b599400, 0x2b5d0000)
+No shared spaces configured.
+}
+Event: 2512.516 GC heap before
+{Heap before GC invocations=248 (full 8):
+ def new generation   total 78528K, used 74402K [0x10050000, 0x15580000, 0x18050000)
+  eden space 69824K, 100% used [0x10050000, 0x14480000, 0x14480000)
+  from space 8704K,  52% used [0x14d00000, 0x151788b0, 0x15580000)
+  to   space 8704K,   0% used [0x14480000, 0x14480000, 0x14d00000)
+ tenured generation   total 174412K, used 125658K [0x18050000, 0x22aa3000, 0x28050000)
+   the space 174412K,  72% used [0x18050000, 0x1fb06888, 0x1fb06a00, 0x22aa3000)
+ compacting perm gen  total 54784K, used 54564K [0x28050000, 0x2b5d0000, 0x38050000)
+   the space 54784K,  99% used [0x28050000, 0x2b5993b0, 0x2b599400, 0x2b5d0000)
+No shared spaces configured.
+Event: 2512.537 GC heap after
+Heap after GC invocations=249 (full 8):
+ def new generation   total 78528K, used 4850K [0x10050000, 0x15580000, 0x18050000)
+  eden space 69824K,   0% used [0x10050000, 0x10050000, 0x14480000)
+  from space 8704K,  55% used [0x14480000, 0x1493ca80, 0x14d00000)
+  to   space 8704K,   0% used [0x14d00000, 0x14d00000, 0x15580000)
+ tenured generation   total 174412K, used 126091K [0x18050000, 0x22aa3000, 0x28050000)
+   the space 174412K,  72% used [0x18050000, 0x1fb72d28, 0x1fb72e00, 0x22aa3000)
+ compacting perm gen  total 54784K, used 54564K [0x28050000, 0x2b5d0000, 0x38050000)
+   the space 54784K,  99% used [0x28050000, 0x2b5993b0, 0x2b599400, 0x2b5d0000)
+No shared spaces configured.
+}
+Event: 2524.079 GC heap before
+{Heap before GC invocations=249 (full 8):
+ def new generation   total 78528K, used 74674K [0x10050000, 0x15580000, 0x18050000)
+  eden space 69824K, 100% used [0x10050000, 0x14480000, 0x14480000)
+  from space 8704K,  55% used [0x14480000, 0x1493ca80, 0x14d00000)
+  to   space 8704K,   0% used [0x14d00000, 0x14d00000, 0x15580000)
+ tenured generation   total 174412K, used 126091K [0x18050000, 0x22aa3000, 0x28050000)
+   the space 174412K,  72% used [0x18050000, 0x1fb72d28, 0x1fb72e00, 0x22aa3000)
+ compacting perm gen  total 54784K, used 54564K [0x28050000, 0x2b5d0000, 0x38050000)
+   the space 54784K,  99% used [0x28050000, 0x2b5993e0, 0x2b599400, 0x2b5d0000)
+No shared spaces configured.
+Event: 2524.098 GC heap after
+Heap after GC invocations=250 (full 8):
+ def new generation   total 78528K, used 4958K [0x10050000, 0x15580000, 0x18050000)
+  eden space 69824K,   0% used [0x10050000, 0x10050000, 0x14480000)
+  from space 8704K,  56% used [0x14d00000, 0x151d78c8, 0x15580000)
+  to   space 8704K,   0% used [0x14480000, 0x14480000, 0x14d00000)
+ tenured generation   total 174412K, used 126591K [0x18050000, 0x22aa3000, 0x28050000)
+   the space 174412K,  72% used [0x18050000, 0x1fbefe58, 0x1fbf0000, 0x22aa3000)
+ compacting perm gen  total 54784K, used 54564K [0x28050000, 0x2b5d0000, 0x38050000)
+   the space 54784K,  99% used [0x28050000, 0x2b5993e0, 0x2b599400, 0x2b5d0000)
+No shared spaces configured.
+}
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 2451.422 Thread 0x00c69000 NullPointerException in IC check 0x011a7547
+Event: 2451.422 Thread 0x00c69000 Threw 0x100d9520 at C:\jdk7u2_32P\jdk7u4\hotspot\src\share\vm\runtime\sharedRuntime.cpp:613
+Event: 2460.881 Thread 0x00c69000 NullPointerException in IC check 0x011a7547
+Event: 2460.881 Thread 0x00c69000 Threw 0x10106c40 at C:\jdk7u2_32P\jdk7u4\hotspot\src\share\vm\runtime\sharedRuntime.cpp:613
+Event: 2471.430 Thread 0x00c69000 NullPointerException in IC check 0x011a7547
+Event: 2471.430 Thread 0x00c69000 Threw 0x100e3118 at C:\jdk7u2_32P\jdk7u4\hotspot\src\share\vm\runtime\sharedRuntime.cpp:613
+Event: 2486.706 Thread 0x00c69000 NullPointerException in IC check 0x011a7547
+Event: 2486.706 Thread 0x00c69000 Threw 0x1017c080 at C:\jdk7u2_32P\jdk7u4\hotspot\src\share\vm\runtime\sharedRuntime.cpp:613
+Event: 2524.101 Thread 0x00c69000 NullPointerException in IC check 0x011a7547
+Event: 2524.101 Thread 0x00c69000 Threw 0x100f6930 at C:\jdk7u2_32P\jdk7u4\hotspot\src\share\vm\runtime\sharedRuntime.cpp:613
+
+Events (10 events):
+Event: 2524.078 Executing VM operation: GenCollectForAllocation
+Event: 2524.098 Executing VM operation: GenCollectForAllocation done
+Event: 2524.230 Executing VM operation: RevokeBias
+Event: 2524.230 Executing VM operation: RevokeBias done
+Event: 2524.579 Executing VM operation: RevokeBias
+Event: 2524.579 Executing VM operation: RevokeBias done
+Event: 2525.168 Executing VM operation: RevokeBias
+Event: 2525.169 Executing VM operation: RevokeBias done
+Event: 2525.172 Executing VM operation: RevokeBias
+Event: 2525.172 Executing VM operation: RevokeBias done
+
+
+Dynamic libraries:
+0x00400000 - 0x0047a000 	C:\Arquivos de programas\NetBeans 7.1.1\bin\netbeans.exe
+0x7c900000 - 0x7c9b6000 	C:\WINDOWS\system32\ntdll.dll
+0x7c800000 - 0x7c900000 	C:\WINDOWS\system32\kernel32.dll
+0x77bf0000 - 0x77c48000 	C:\WINDOWS\system32\msvcrt.dll
+0x77f50000 - 0x77ffb000 	C:\WINDOWS\system32\ADVAPI32.DLL
+0x77db0000 - 0x77e43000 	C:\WINDOWS\system32\RPCRT4.dll
+0x77f20000 - 0x77f31000 	C:\WINDOWS\system32\Secur32.dll
+0x7e360000 - 0x7e3f1000 	C:\WINDOWS\system32\USER32.dll
+0x77e50000 - 0x77e99000 	C:\WINDOWS\system32\GDI32.dll
+0x76360000 - 0x7637d000 	C:\WINDOWS\system32\IMM32.DLL
+0x10000000 - 0x1004c000 	C:\Arquivos de programas\NetBeans 7.1.1\platform\lib\nbexec.dll
+0x71a70000 - 0x71a87000 	C:\WINDOWS\system32\WS2_32.dll
+0x71a60000 - 0x71a68000 	C:\WINDOWS\system32\WS2HELP.dll
+0x6d9c0000 - 0x6dd0a000 	C:\Arquivos de programas\Java\jdk1.7.0_04\jre\bin\client\jvm.dll
+0x71a90000 - 0x71a9a000 	C:\WINDOWS\system32\WSOCK32.dll
+0x76b20000 - 0x76b4e000 	C:\WINDOWS\system32\WINMM.dll
+0x76bd0000 - 0x76bdb000 	C:\WINDOWS\system32\PSAPI.DLL
+0x78aa0000 - 0x78b5e000 	C:\Arquivos de programas\Java\jdk1.7.0_04\jre\bin\MSVCR100.dll
+0x6d800000 - 0x6d835000 	C:\Arquivos de programas\Java\jdk1.7.0_04\jre\bin\splashscreen.dll
+0x5b1c0000 - 0x5b1f8000 	C:\WINDOWS\system32\uxtheme.dll
+0x6d950000 - 0x6d95c000 	C:\Arquivos de programas\Java\jdk1.7.0_04\jre\bin\verify.dll
+0x6d400000 - 0x6d420000 	C:\Arquivos de programas\Java\jdk1.7.0_04\jre\bin\java.dll
+0x746e0000 - 0x7472c000 	C:\WINDOWS\system32\MSCTF.dll
+0x75290000 - 0x752be000 	C:\WINDOWS\system32\msctfime.ime
+0x774c0000 - 0x775fe000 	C:\WINDOWS\system32\ole32.dll
+0x6d9a0000 - 0x6d9b3000 	C:\Arquivos de programas\Java\jdk1.7.0_04\jre\bin\zip.dll
+0x6d720000 - 0x6d734000 	C:\Arquivos de programas\Java\jdk1.7.0_04\jre\bin\net.dll
+0x6d740000 - 0x6d74f000 	C:\Arquivos de programas\Java\jdk1.7.0_04\jre\bin\nio.dll
+0x76d40000 - 0x76d59000 	C:\WINDOWS\system32\IPHLPAPI.DLL
+0x76d20000 - 0x76d38000 	C:\WINDOWS\system32\MPRAPI.dll
+0x77ca0000 - 0x77cd2000 	C:\WINDOWS\system32\ACTIVEDS.dll
+0x76df0000 - 0x76e15000 	C:\WINDOWS\system32\adsldpc.dll
+0x5bcb0000 - 0x5bd05000 	C:\WINDOWS\system32\NETAPI32.dll
+0x76f40000 - 0x76f6d000 	C:\WINDOWS\system32\WLDAP32.dll
+0x76b00000 - 0x76b11000 	C:\WINDOWS\system32\ATL.DLL
+0x77100000 - 0x7718b000 	C:\WINDOWS\system32\OLEAUT32.dll
+0x76e60000 - 0x76e6e000 	C:\WINDOWS\system32\rtutils.dll
+0x71bc0000 - 0x71bd3000 	C:\WINDOWS\system32\SAMLIB.dll
+0x77900000 - 0x779f5000 	C:\WINDOWS\system32\SETUPAPI.dll
+0x71a10000 - 0x71a50000 	C:\WINDOWS\system32\mswsock.dll
+0x60b30000 - 0x60b88000 	C:\WINDOWS\system32\hnetcfg.dll
+0x71a50000 - 0x71a58000 	C:\WINDOWS\System32\wshtcpip.dll
+0x68000000 - 0x68036000 	C:\WINDOWS\system32\rsaenh.dll
+0x769a0000 - 0x76a55000 	C:\WINDOWS\system32\USERENV.dll
+0x76f00000 - 0x76f27000 	C:\WINDOWS\system32\DNSAPI.dll
+0x76f90000 - 0x76f98000 	C:\WINDOWS\System32\winrnr.dll
+0x07da0000 - 0x07db9000 	C:\Arquivos de programas\Bonjour\mdnsNSP.dll
+0x76fa0000 - 0x76fa6000 	C:\WINDOWS\system32\rasadhlp.dll
+0x6d110000 - 0x6d252000 	C:\Arquivos de programas\Java\jdk1.7.0_04\jre\bin\awt.dll
+0x5d510000 - 0x5d5aa000 	C:\WINDOWS\system32\COMCTL32.dll
+0x6d350000 - 0x6d37a000 	C:\Arquivos de programas\Java\jdk1.7.0_04\jre\bin\fontmanager.dll
+0x6d8f0000 - 0x6d921000 	C:\Arquivos de programas\Java\jdk1.7.0_04\jre\bin\t2k.dll
+0x7c9c0000 - 0x7d1de000 	C:\WINDOWS\system32\SHELL32.dll
+0x77ea0000 - 0x77f16000 	C:\WINDOWS\system32\SHLWAPI.dll
+0x773b0000 - 0x774b3000 	C:\WINDOWS\WinSxS\x86_Microsoft.Windows.Common-Controls_6595b64144ccf1df_6.0.2600.6028_x-ww_61e65202\comctl32.dll
+0x093d0000 - 0x09425000 	C:\Arquivos de programas\NetBeans 7.1.1\platform\modules\lib\x86\jnidispatch.dll
+0x6d680000 - 0x6d68a000 	C:\Arquivos de programas\Java\jdk1.7.0_04\jre\bin\management.dll
+0x76fb0000 - 0x7702f000 	C:\WINDOWS\system32\CLBCATQ.DLL
+0x77030000 - 0x770fd000 	C:\WINDOWS\system32\COMRes.dll
+0x77be0000 - 0x77be8000 	C:\WINDOWS\system32\VERSION.dll
+0x77b20000 - 0x77b42000 	C:\WINDOWS\system32\appHelp.dll
+0x77a00000 - 0x77a55000 	C:\WINDOWS\System32\cscui.dll
+0x765d0000 - 0x765ed000 	C:\WINDOWS\System32\CSCDLL.dll
+0x04e00000 - 0x050d0000 	C:\WINDOWS\system32\xpsp2res.dll
+0x050d0000 - 0x05133000 	C:\Arquivos de programas\Arquivos comuns\Adobe\Acrobat\ActiveX\PDFShell.dll
+0x78480000 - 0x7850e000 	C:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.30729.6161_x-ww_31a54e43\MSVCP90.dll
+0x78520000 - 0x785c3000 	C:\WINDOWS\WinSxS\x86_Microsoft.VC90.CRT_1fc8b3b9a1e18e3b_9.0.30729.6161_x-ww_31a54e43\MSVCR90.dll
+0x05140000 - 0x0518b000 	C:\Arquivos de programas\Arquivos comuns\Adobe\Acrobat\ActiveX\PDFShell.PTB
+0x71ae0000 - 0x71af2000 	C:\WINDOWS\system32\MPR.dll
+0x75f30000 - 0x75f37000 	C:\WINDOWS\System32\drprov.dll
+0x71be0000 - 0x71bee000 	C:\WINDOWS\System32\ntlanman.dll
+0x71ca0000 - 0x71cb7000 	C:\WINDOWS\System32\NETUI0.dll
+0x71c60000 - 0x71ca0000 	C:\WINDOWS\System32\NETUI1.dll
+0x71c50000 - 0x71c57000 	C:\WINDOWS\System32\NETRAP.dll
+0x75f40000 - 0x75f4a000 	C:\WINDOWS\System32\davclnt.dll
+0x051a0000 - 0x0541e000 	C:\WINDOWS\system32\wpdshext.dll
+0x4eb60000 - 0x4ed0b000 	C:\WINDOWS\WinSxS\x86_Microsoft.Windows.GdiPlus_6595b64144ccf1df_1.0.6002.22509_x-ww_c7dad023\gdiplus.dll
+0x05720000 - 0x05769000 	C:\WINDOWS\system32\PortableDeviceApi.dll
+0x76c10000 - 0x76c3e000 	C:\WINDOWS\system32\WINTRUST.dll
+0x77a60000 - 0x77af6000 	C:\WINDOWS\system32\CRYPT32.dll
+0x77b00000 - 0x77b12000 	C:\WINDOWS\system32\MSASN1.dll
+0x76c70000 - 0x76c98000 	C:\WINDOWS\system32\IMAGEHLP.dll
+0x73d20000 - 0x73d33000 	C:\WINDOWS\system32\shgina.dll
+0x75940000 - 0x75a39000 	C:\WINDOWS\system32\MSGINA.dll
+0x74610000 - 0x7464d000 	C:\WINDOWS\system32\ODBC32.dll
+0x76380000 - 0x763c8000 	C:\WINDOWS\system32\comdlg32.dll
+0x76330000 - 0x76340000 	C:\WINDOWS\system32\WINSTA.dll
+0x059b0000 - 0x059c8000 	C:\WINDOWS\system32\odbcint.dll
+0x07160000 - 0x071a6000 	C:\WINDOWS\system32\Audiodev.dll
+0x059d0000 - 0x05c2d000 	C:\WINDOWS\system32\WMVCore.DLL
+0x05c30000 - 0x05c6a000 	C:\WINDOWS\system32\WMASF.DLL
+0x76960000 - 0x76968000 	C:\WINDOWS\system32\LINKINFO.dll
+0x76970000 - 0x76996000 	C:\WINDOWS\system32\ntshrui.dll
+0x75d70000 - 0x75e01000 	C:\WINDOWS\system32\MLANG.dll
+0x59ea0000 - 0x59f41000 	C:\WINDOWS\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Dnetbeans.importclass=org.netbeans.upgrade.AutoUpgrade -Dnetbeans.accept_license_class=org.netbeans.license.AcceptLicense -client -Xss2m -Xms32m -XX:PermSize=32m -Dapple.laf.useScreenMenuBar=true -Dapple.awt.graphics.UseQuartz=true -Dsun.java2d.noddraw=true -Dsun.zip.disableMemoryMapping=true -Xmx384m -XX:MaxPermSize=256m -Djdk.home=C:\Arquivos de programas\Java\jdk1.7.0_04 -splash:C:\Documents and Settings\perty\.netbeans\7.1.1\var\cache\splash.png -Dnetbeans.home=C:\Arquivos de programas\NetBeans 7.1.1\platform -Dnetbeans.user=C:\Documents and Settings\perty\.netbeans\7.1.1 -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=C:\Documents and Settings\perty\.netbeans\7.1.1\var\log\heapdump.hprof -Dnetbeans.system_http_proxy=DIRECT -Dsun.awt.keepWorkingSetOnMinimize=true -Dnetbeans.dirs=C:\Arquivos de programas\NetBeans 7.1.1\nb;C:\Arquivos de programas\NetBeans 7.1.1\ergonomics;C:\Arquivos de programas\NetBeans 7.1.1\ide;C:\Arquivos de programas\NetBeans 7.1.1\java;C:\Arquivos de programas\NetBeans 7.1.1\apisupport;C:\Arquivos de programas\NetBeans 7.1.1\webcommon;C:\Arquivos de programas\NetBeans 7.1.1\websvccommon;C:\Arquivos de programas\NetBeans 7.1.1\enterprise;C:\Arquivos de programas\NetBeans 7.1.1\mobility;C:\Arquivos de programas\NetBeans 7.1.1\profiler;C:\Arquivos de programas\NetBeans 7.1.1\python;C:\Arquivos de programas\NetBeans 7.1.1\php;C:\Arquivos de programas\NetBeans 7.1.1\identity;C:\Arquivos de programas\NetBeans 7.1.1\harness;C:\Arquivos de programas\NetBeans 7.1.1\cnd;C:\Arquivos de programas\NetBeans 7.1.1\dlight;C:\Arquivos de programas\NetBeans 7.1.1\groovy;C:\Arquivos de programas\NetBeans 7.1.1\extra;C:\Arquivos de programas\NetBeans 7.1.1\javacard;C:\Arquivos de programas\NetBeans 7.1.1\javafx 
+java_command: <unknown>
+Launcher Type: generic
+
+Environment Variables:
+PATH=C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem
+USERNAME=perty
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=x86 Family 6 Model 15 Stepping 13, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows XP Build 2600 Service Pack 3
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 6 model 15 stepping 13, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, tsc
+
+Memory: 4k page, physical 3538092k(2202372k free), swap 5466620k(4055568k free)
+
+vm_info: Java HotSpot(TM) Client VM (23.0-b21) for windows-x86 JRE (1.7.0_04-b20), built on Apr 12 2012 03:26:46 by "java_re" with unknown MS VC++:1600
+
+time: Fri May 04 23:21:47 2012
+elapsed time: 2525 seconds
+

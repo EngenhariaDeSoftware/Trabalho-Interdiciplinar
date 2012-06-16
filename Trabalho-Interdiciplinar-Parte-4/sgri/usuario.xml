@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pessoas>
+    <item>
+        <InformacaoPessoal>
+            <Nome>bbbbbbbb</Nome>
+            <DataNascimento>13/02/1968</DataNascimento>
+            <dataCadastro>05/05/2012</dataCadastro>
+            <Cpf>456.465.465-46</Cpf>
+            <Contatos>
+                <Telefone>(63) 6565-6564</Telefone>
+                <celular>(45) 6456-4564</celular>
+                <Email>bbbbbbbaa@msn.com</Email>
+                <Morada>
+                    <Cep>51 654-564</Cep>
+                    <Cidade>Anama</Cidade>
+                    <Estado>AM</Estado>
+                    <Bairro>barre</Bairro>
+                    <Endereco>sfasfsa</Endereco>
+                </Morada>
+            </Contatos>
+        </InformacaoPessoal>
+    </item>
+    <item>
+        <InformacaoPessoal>
+            <Nome>aaaaaaa</Nome>
+            <DataNascimento>13/02/1968</DataNascimento>
+            <dataCadastro>05/05/2012</dataCadastro>
+            <Cpf>456.465.465-46</Cpf>
+            <Contatos>
+                <Telefone>(63) 6565-6564</Telefone>
+                <celular>(45) 6456-4564</celular>
+                <Email>aaaaaaaaaaaaaaaaa@msn.com</Email>
+                <Morada>
+                    <Cep>51 654-564</Cep>
+                    <Cidade>Anama</Cidade>
+                    <Estado>AM</Estado>
+                    <Bairro>barre</Bairro>
+                    <Endereco>sfasfsa</Endereco>
+                </Morada>
+            </Contatos>
+        </InformacaoPessoal>
+    </item>
+</Pessoas>
